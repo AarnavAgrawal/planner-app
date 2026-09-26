@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
+  <title>Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand drag">
+        <img src="icon.png" alt="" class="brand-logo">
+        <span>Planner</span>
+      </div>
+
+      <nav class="nav" id="nav"></nav>
+
+      <div class="side-section">
+        <div class="side-heading">
+          <span>Courses</span>
+          <button class="icon-btn sm" data-action="new-course" title="Add course" aria-label="Add course" id="add-course-btn"></button>
+        </div>
+        <div id="course-list" class="course-list"></div>
+      </div>
+
+      <div class="side-footer">
+        <button class="nav-item" data-action="settings" id="settings-btn"></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar drag">
+        <div class="search no-drag">
+          <span class="search-icon" id="search-icon"></span>
+          <input id="search" type="search" placeholder="Search   /" autocomplete="off" spellcheck="false">
+        </div>
+        <button class="btn primary no-drag" data-action="new-item" id="new-btn"></button>
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <div class="modal-root" id="modal-root"></div>
+  <div class="toast-root" id="toast-root"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
